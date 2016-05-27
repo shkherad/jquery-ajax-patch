@@ -2,10 +2,10 @@
 
 # use like this:
 #
-#     TITLE="Harry Potter: Deathly Hallows" AUTHOR="J.K. Rowling" ./scripts/book-create.sh
+#     ID="66" TITLE="New Book" AUTHOR="New Author" ./scripts/book-update.sh
 #
 
-curl --include --request "POST" "http://localhost:3000/books" \
+curl --include --request "PATCH" "http://localhost:3000/books/$ID"  \
   --header "Content-Type: application/json" \
   --data "{
     \"book\": {
